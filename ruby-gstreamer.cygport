@@ -1,7 +1,11 @@
-NAME="ruby-gstreamer"
-VERSION=1.1.8
-RELEASE=1
 inherit rubygem
 
+NAME="ruby-gstreamer"
+VERSION=1.2.1
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby GStreamer 0.10 bindings"
+DESCRIPTION="Ruby/GStreamer is a Ruby binding for GStreamer 0.10."
+HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
 
 DEPS_PATH="/usr/lib/ruby/gems/${RUBY_VERSION}/gems/glib2-*/lib"
