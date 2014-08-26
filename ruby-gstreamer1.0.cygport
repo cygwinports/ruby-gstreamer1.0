@@ -1,0 +1,20 @@
+ORIG_PN="gstreamer"
+inherit rubygem
+
+NAME="ruby-gstreamer1.0"
+VERSION=2.2.0
+RELEASE=1
+CATEGORY="Ruby"
+SUMMARY="Ruby GStreamer 1.0 bindings"
+DESCRIPTION="Ruby/GStreamer is a Ruby binding for GStreamer 1.0."
+HOMEPAGE="http://ruby-gnome2.sourceforge.jp/"
+
+PKG_NAMES="${NAME} ${NAME}-devel ${NAME}-doc"
+ruby_gstreamer1_0_REQUIRES="girepository-Gst1.0"
+ruby_gstreamer1_0_CONTENTS="--exclude=sample ${RUBYGEM_EXTDIR#/} ${RUBYGEM_INSTDIR#/} ${RUBYGEM_SPEC#/}"
+ruby_gstreamer1_0_devel_REQUIRES="${NAME}"
+ruby_gstreamer1_0_devel_CONTENTS="usr/lib/pkgconfig/"
+ruby_gstreamer1_0_doc_CONTENTS="${RUBYGEM_DOCDIR#/} ${RUBYGEM_INSTDIR#/}/sample/"
+PKG_IGNORE="usr/lib/lib*.a"
+
+DEPS_PATH="${RUBYGEM_EXTDIR%/*}/glib2-${VERSION}:${RUBYGEM_EXTDIR%/*}/gobject-introspection-${VERSION}"
