@@ -2,7 +2,7 @@ ORIG_PN="gstreamer"
 inherit rubygem
 
 NAME="ruby-gstreamer1.0"
-VERSION=2.2.0
+VERSION=2.2.5
 RELEASE=1
 CATEGORY="Ruby"
 SUMMARY="Ruby GStreamer 1.0 bindings"
